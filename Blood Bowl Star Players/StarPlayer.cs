@@ -25,8 +25,9 @@ namespace Blood_Bowl_Star_Players
         private string favouredOf;
         private int cost;
         private string starPlayerImage;
+        private string specialRules;
 
-        public StarPlayer(string starPlayerName, int movementAllowance, int strength, int agility, int passingAbility, int armourValue, string skills, string halflingThimbleCup, string lustrianSuperLeague, string oldWorldClassic, string sylvanianSpotlight, string elvenKingdomsLeague, string worldsEdgeSuperleague, string badlandsBrawl, string underworldChallenge, string favouredOf, int cost, string starPlayerImage)
+        public StarPlayer(string starPlayerName, int movementAllowance, int strength, int agility, int passingAbility, int armourValue, string skills, string halflingThimbleCup, string lustrianSuperLeague, string oldWorldClassic, string sylvanianSpotlight, string elvenKingdomsLeague, string worldsEdgeSuperleague, string badlandsBrawl, string underworldChallenge, string favouredOf, int cost, string starPlayerImage, string specialRules)
         {
             this.StarPlayerName = starPlayerName;
             this.MovementAllowance = movementAllowance;
@@ -46,6 +47,7 @@ namespace Blood_Bowl_Star_Players
             this.FavouredOf = favouredOf;
             this.Cost = cost;
             this.StarPlayerImage = starPlayerImage;
+            this.SpecialRules = specialRules;
         }
 
         public string StarPlayerName { get => starPlayerName; set => starPlayerName = value; }
@@ -66,5 +68,6 @@ namespace Blood_Bowl_Star_Players
         public string FavouredOf { get => favouredOf; set => favouredOf = value; }
         public int Cost { get => cost; set => cost = value; }
         public string StarPlayerImage { get => starPlayerImage; set => starPlayerImage = value; }
+        public string SpecialRules { get => specialRules; set => specialRules = value; }
     }
 }
