@@ -21,21 +21,8 @@ namespace Blood_Bowl_Star_Players
         public Form1()
         {
             InitializeComponent();
-            starPlayerNametextBox.Text = playerArray[index].StarPlayerName;
-            CosttextBox.Text = playerArray[index].Cost.ToString();
-
-            MAtextBox.Text = playerArray[index].MovementAllowance.ToString();
-            STtextBox.Text = playerArray[index].Strength.ToString();
-            AGtextBox.Text = playerArray[index].Agility.ToString();
-            PAtextBox.Text = playerArray[index].PassingAbility.ToString();
-            AVtextBox.Text = playerArray[index].ArmourValue.ToString();
-            SkillstextBox.Text = playerArray[index].Skills.ToString();
-            specialRulestextBox.Text = playerArray[index].SpecialRules;
-            
-
-
-
-        }
+            populateForm();
+                    }
 
         private void Nextbutton_Click(object sender, EventArgs e)
         {
@@ -44,16 +31,7 @@ namespace Blood_Bowl_Star_Players
             {
                 index = 0;
             }
-            starPlayerNametextBox.Text = playerArray[index].StarPlayerName;
-            CosttextBox.Text = playerArray[index].Cost.ToString();
-
-            MAtextBox.Text = playerArray[index].MovementAllowance.ToString();
-            STtextBox.Text = playerArray[index].Strength.ToString();
-            AGtextBox.Text = playerArray[index].Agility.ToString();
-            PAtextBox.Text = playerArray[index].PassingAbility.ToString();
-            AVtextBox.Text = playerArray[index].ArmourValue.ToString();
-            SkillstextBox.Text = playerArray[index].Skills.ToString();
-            specialRulestextBox.Text = playerArray[index].SpecialRules;
+            populateForm();
 
         }
 
@@ -64,6 +42,11 @@ namespace Blood_Bowl_Star_Players
             {
                 index = 0;
             }
+            populateForm();
+        }
+
+        private void populateForm()
+        {
             starPlayerNametextBox.Text = playerArray[index].StarPlayerName;
             CosttextBox.Text = playerArray[index].Cost.ToString();
 
