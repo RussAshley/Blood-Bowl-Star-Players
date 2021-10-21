@@ -48,6 +48,7 @@ namespace Blood_Bowl_Star_Players
             this.ImagerichTextBox = new System.Windows.Forms.RichTextBox();
             this.LeaguestextBox = new System.Windows.Forms.TextBox();
             this.Nextbutton = new System.Windows.Forms.Button();
+            this.Previousbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // starPlayerNametextBox
@@ -209,11 +210,23 @@ namespace Blood_Bowl_Star_Players
             this.Nextbutton.UseVisualStyleBackColor = true;
             this.Nextbutton.Click += new System.EventHandler(this.Nextbutton_Click);
             // 
+            // Previousbutton
+            // 
+            this.Previousbutton.Location = new System.Drawing.Point(37, 421);
+            this.Previousbutton.Name = "Previousbutton";
+            this.Previousbutton.Size = new System.Drawing.Size(75, 23);
+            this.Previousbutton.TabIndex = 20;
+            this.Previousbutton.Tag = "";
+            this.Previousbutton.Text = "<Previous";
+            this.Previousbutton.UseVisualStyleBackColor = true;
+            this.Previousbutton.Click += new System.EventHandler(this.Previousbutton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(666, 488);
+            this.Controls.Add(this.Previousbutton);
             this.Controls.Add(this.Nextbutton);
             this.Controls.Add(this.LeaguestextBox);
             this.Controls.Add(this.ImagerichTextBox);
@@ -261,6 +274,7 @@ namespace Blood_Bowl_Star_Players
         private System.Windows.Forms.RichTextBox ImagerichTextBox;
         private System.Windows.Forms.TextBox LeaguestextBox;
         private System.Windows.Forms.Button Nextbutton;
+        private System.Windows.Forms.Button Previousbutton;
     }
 }
 
