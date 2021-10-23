@@ -14,6 +14,7 @@ namespace Blood_Bowl_Star_Players
         private int passingAbility;
         private int armourValue;
         private string skills;
+        private string specialRules;
         private string halflingThimbleCup;
         private string lustrianSuperLeague;
         private string oldWorldClassic;
@@ -25,9 +26,9 @@ namespace Blood_Bowl_Star_Players
         private string favouredOf;
         private int cost;
         private string starPlayerImage;
-        private string specialRules;
+       
 
-        public StarPlayer(string starPlayerName, int movementAllowance, int strength, int agility, int passingAbility, int armourValue, string skills, string halflingThimbleCup, string lustrianSuperLeague, string oldWorldClassic, string sylvanianSpotlight, string elvenKingdomsLeague, string worldsEdgeSuperleague, string badlandsBrawl, string underworldChallenge, string favouredOf, int cost, string starPlayerImage, string specialRules)
+        public StarPlayer(string starPlayerName, int movementAllowance, int strength, int agility, int passingAbility, int armourValue, string skills, string specialRules, string halflingThimbleCup, string lustrianSuperLeague, string oldWorldClassic, string sylvanianSpotlight, string elvenKingdomsLeague, string worldsEdgeSuperleague, string badlandsBrawl, string underworldChallenge, string favouredOf, int cost, string starPlayerImage )
         {
             this.StarPlayerName = starPlayerName;
             this.MovementAllowance = movementAllowance;
@@ -36,6 +37,7 @@ namespace Blood_Bowl_Star_Players
             this.PassingAbility = passingAbility;
             this.ArmourValue = armourValue;
             this.Skills = skills;
+            this.SpecialRules = specialRules;
             this.HalflingThimbleCup = halflingThimbleCup;
             this.LustrianSuperLeague = lustrianSuperLeague;
             this.OldWorldClassic = oldWorldClassic;
@@ -47,7 +49,7 @@ namespace Blood_Bowl_Star_Players
             this.FavouredOf = favouredOf;
             this.Cost = cost;
             this.StarPlayerImage = starPlayerImage;
-            this.SpecialRules = specialRules;
+           
         }
 
         public string StarPlayerName { get => starPlayerName; set => starPlayerName = value; }

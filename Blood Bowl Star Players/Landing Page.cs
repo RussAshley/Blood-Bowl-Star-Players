@@ -60,6 +60,7 @@ namespace Blood_Bowl_Star_Players
             AVtextBox.Text = playerArray[index].ArmourValue.ToString();
             SkillstextBox.Text = playerArray[index].Skills.ToString();
             specialRulestextBox.Text = playerArray[index].SpecialRules;
+            StarpictureBox.Image = Image.FromFile(playerArray[index].StarPlayerImage);
         }
     }
 }
