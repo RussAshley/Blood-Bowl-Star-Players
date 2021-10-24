@@ -50,6 +50,7 @@ namespace Blood_Bowl_Star_Players
 
         private void populateForm()
         {
+            string compare = "Yes";
             starPlayerNametextBox.Text = playerArray[index].StarPlayerName;
             CosttextBox.Text = playerArray[index].Cost.ToString();
 
@@ -61,6 +62,53 @@ namespace Blood_Bowl_Star_Players
             SkillstextBox.Text = playerArray[index].Skills.ToString();
             specialRulestextBox.Text = playerArray[index].SpecialRules;
             StarpictureBox.Image = Image.FromFile(playerArray[index].StarPlayerImage);
+
+            if (playerArray[index].HalflingThimbleCup == compare )
+            {
+                LeaguestextBox.Text = ($"Halfling Thimble Cup {Environment.NewLine} \n"); 
+
+
+            }
+
+            if (playerArray[index].LustrianSuperLeague == compare )
+            {
+                LeaguestextBox.Text = ($"Lustrian Superleague {Environment.NewLine} \n");
+            }
+
+            if (playerArray[index].OldWorldClassic == compare )
+            {
+                LeaguestextBox.Text = ($"Old World Classic {Environment.NewLine} \n");
+            }
+
+            if (playerArray[index].SylvanianSpotlight == compare )
+            {
+                LeaguestextBox.Text = ($"Sylvanian Spotlight {Environment.NewLine} \n");
+            }
+
+            if (playerArray[index].ElvenKingdomsLeague == compare )
+            {
+                LeaguestextBox.Text = ($"Elven Kingdom League {Environment.NewLine} \n");
+            }
+
+            if (playerArray[index].WorldsEdgeSuperleague == compare )
+            {
+                LeaguestextBox.Text = ($"Worlds Edge Superleague {Environment.NewLine} \n");
+            }
+
+            if (playerArray[index].BadlandsBrawl == compare )
+            {
+                LeaguestextBox.Text = ($"Badlands Brawl {Environment.NewLine} \n");
+            }
+
+            if (playerArray[index].UnderworldChallenge == compare )
+            {
+                LeaguestextBox.Text = ($"UnderworldChallenge {Environment.NewLine}  \n");
+            }
+
+            if (playerArray[index].FavouredOf == compare )
+            {
+                LeaguestextBox.Text = ($"Favoured Of... {Environment.NewLine} \n");
+            }
         }
     }
 }

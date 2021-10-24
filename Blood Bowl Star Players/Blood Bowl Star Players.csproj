@@ -45,6 +45,9 @@
     <None Update="Images\Grombrindal.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Images\Hack.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Images\HakflemSkuttlespike.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

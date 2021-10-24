@@ -55,59 +55,75 @@ namespace Blood_Bowl_Star_Players
             // 
             // starPlayerNametextBox
             // 
+            this.starPlayerNametextBox.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.starPlayerNametextBox.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.starPlayerNametextBox.Location = new System.Drawing.Point(74, 47);
             this.starPlayerNametextBox.Name = "starPlayerNametextBox";
             this.starPlayerNametextBox.PlaceholderText = "Name";
-            this.starPlayerNametextBox.Size = new System.Drawing.Size(417, 23);
+            this.starPlayerNametextBox.Size = new System.Drawing.Size(417, 30);
             this.starPlayerNametextBox.TabIndex = 0;
+            this.starPlayerNametextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CosttextBox
             // 
+            this.CosttextBox.BackColor = System.Drawing.Color.PaleTurquoise;
             this.CosttextBox.Location = new System.Drawing.Point(497, 47);
             this.CosttextBox.Name = "CosttextBox";
             this.CosttextBox.PlaceholderText = "Cost";
             this.CosttextBox.Size = new System.Drawing.Size(57, 23);
             this.CosttextBox.TabIndex = 1;
+            this.CosttextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MAtextBox
             // 
+            this.MAtextBox.BackColor = System.Drawing.Color.PaleTurquoise;
             this.MAtextBox.Location = new System.Drawing.Point(65, 119);
             this.MAtextBox.Name = "MAtextBox";
             this.MAtextBox.PlaceholderText = "MA";
             this.MAtextBox.Size = new System.Drawing.Size(35, 23);
             this.MAtextBox.TabIndex = 2;
+            this.MAtextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // STtextBox
             // 
+            this.STtextBox.BackColor = System.Drawing.Color.PaleTurquoise;
             this.STtextBox.Location = new System.Drawing.Point(106, 119);
             this.STtextBox.Name = "STtextBox";
             this.STtextBox.Size = new System.Drawing.Size(28, 23);
             this.STtextBox.TabIndex = 3;
+            this.STtextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AGtextBox
             // 
+            this.AGtextBox.BackColor = System.Drawing.Color.PaleTurquoise;
             this.AGtextBox.Location = new System.Drawing.Point(140, 119);
             this.AGtextBox.Name = "AGtextBox";
             this.AGtextBox.Size = new System.Drawing.Size(33, 23);
             this.AGtextBox.TabIndex = 4;
+            this.AGtextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PAtextBox
             // 
+            this.PAtextBox.BackColor = System.Drawing.Color.PaleTurquoise;
             this.PAtextBox.Location = new System.Drawing.Point(179, 119);
             this.PAtextBox.Name = "PAtextBox";
             this.PAtextBox.Size = new System.Drawing.Size(34, 23);
             this.PAtextBox.TabIndex = 5;
+            this.PAtextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AVtextBox
             // 
+            this.AVtextBox.BackColor = System.Drawing.Color.PaleTurquoise;
             this.AVtextBox.Location = new System.Drawing.Point(219, 119);
             this.AVtextBox.Name = "AVtextBox";
             this.AVtextBox.Size = new System.Drawing.Size(37, 23);
             this.AVtextBox.TabIndex = 6;
+            this.AVtextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // SkillstextBox
             // 
-            this.SkillstextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SkillstextBox.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.SkillstextBox.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SkillstextBox.Location = new System.Drawing.Point(262, 119);
             this.SkillstextBox.Multiline = true;
             this.SkillstextBox.Name = "SkillstextBox";
@@ -117,7 +133,7 @@ namespace Blood_Bowl_Star_Players
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 101);
+            this.label1.Location = new System.Drawing.Point(65, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 15);
             this.label1.TabIndex = 8;
@@ -179,6 +195,8 @@ namespace Blood_Bowl_Star_Players
             // 
             // specialRulestextBox
             // 
+            this.specialRulestextBox.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.specialRulestextBox.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.specialRulestextBox.Location = new System.Drawing.Point(65, 183);
             this.specialRulestextBox.Multiline = true;
             this.specialRulestextBox.Name = "specialRulestextBox";
@@ -188,6 +206,7 @@ namespace Blood_Bowl_Star_Players
             // 
             // LeaguestextBox
             // 
+            this.LeaguestextBox.BackColor = System.Drawing.Color.PaleTurquoise;
             this.LeaguestextBox.Location = new System.Drawing.Point(65, 374);
             this.LeaguestextBox.Multiline = true;
             this.LeaguestextBox.Name = "LeaguestextBox";
