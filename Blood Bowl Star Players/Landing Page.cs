@@ -172,12 +172,13 @@ namespace Blood_Bowl_Star_Players
 
         private void HalflingThimbleradioButton_Click(object sender, EventArgs e)
         {
+            comboBox1.Items.Clear();
            
              playerArray = pda.ReadAllStars();
             for (int i = 0; i < playerArray.Length; i++)
             
 
-               if (playerArray[index].HalflingThimbleCup == "Yes")
+               if (playerArray[i].HalflingThimbleCup == "Yes")
               {
                 comboBox1.Items.Add(playerArray[i].StarPlayerName);
               
@@ -186,17 +187,139 @@ namespace Blood_Bowl_Star_Players
            
         }
 
-
-
-
-
-
-
-
-
-        private void populateSidebar()
+        private void LustrianSuperleagueradioButton_Click(object sender, EventArgs e)
         {
-           
+            comboBox1.Items.Clear();
+            playerArray = pda.ReadAllStars();
+            for (int i = 0; i < playerArray.Length; i++)
+
+
+                if (playerArray[i].LustrianSuperLeague == "Yes")
+                {
+                    comboBox1.Items.Add(playerArray[i].StarPlayerName);
+
+                }
+
+        }
+
+        private void OldWorldClassicradioButton_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            playerArray = pda.ReadAllStars();
+            for (int i = 0; i < playerArray.Length; i++)
+
+
+                if (playerArray[i].OldWorldClassic == "Yes")
+                {
+                    comboBox1.Items.Add(playerArray[i].StarPlayerName);
+
+                }
+        }
+
+        private void SylvanianSpotlightradioButton_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            playerArray = pda.ReadAllStars();
+            for (int i = 0; i < playerArray.Length; i++)
+
+
+                if (playerArray[i].SylvanianSpotlight == "Yes")
+                {
+                    comboBox1.Items.Add(playerArray[i].StarPlayerName);
+
+                }
+
+        }
+
+        private void ElvenKingdomradioButton_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            playerArray = pda.ReadAllStars();
+            for (int i = 0; i < playerArray.Length; i++)
+
+
+                if (playerArray[i].ElvenKingdomsLeague == "Yes")
+                {
+                    comboBox1.Items.Add(playerArray[i].StarPlayerName);
+
+                }
+
+        }
+
+        private void WorldsEdgeSuperradioButton_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            playerArray = pda.ReadAllStars();
+            for (int i = 0; i < playerArray.Length; i++)
+
+
+                if (playerArray[i].WorldsEdgeSuperleague == "Yes")
+                {
+                    comboBox1.Items.Add(playerArray[i].StarPlayerName);
+
+                }
+
+        }
+
+        private void BadlandsBrawlradioButton_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            playerArray = pda.ReadAllStars();
+            for (int i = 0; i < playerArray.Length; i++)
+
+
+                if (playerArray[i].BadlandsBrawl == "Yes")
+                {
+                    comboBox1.Items.Add(playerArray[i].StarPlayerName);
+
+                }
+        }
+
+        private void UnderworldChallengeradioButton_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            playerArray = pda.ReadAllStars();
+            for (int i = 0; i < playerArray.Length; i++)
+
+
+                if (playerArray[i].UnderworldChallenge== "Yes")
+                {
+                    comboBox1.Items.Add(playerArray[i].StarPlayerName);
+
+                }
+        }
+
+        private void FavouredOfradioButton_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            playerArray = pda.ReadAllStars();
+            for (int i = 0; i < playerArray.Length; i++)
+
+
+                if (playerArray[i].FavouredOf== "Yes")
+                {
+                    comboBox1.Items.Add(playerArray[i].StarPlayerName);
+
+                }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // take the selectedindex or selectedplayername and compare to the playerArray index or playername.
+           // starPlayerNametextBox.Text =
+          // playerArray[comboBox1.Text].StarPlayerName;
+            // textBoxName.Text = yourArray[combobox.selectedindex].ClassName;
+           // playerArray = pda.ReadAllStars();
+            for (int i = 0; i < playerArray.Length; i++)
+
+                if (comboBox1.Text == playerArray[i].StarPlayerName)
+               {
+                    index = i;
+                   populateForm();
+                }
+
+
         }
     }
 

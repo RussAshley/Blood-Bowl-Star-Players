@@ -283,6 +283,7 @@ namespace Blood_Bowl_Star_Players
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 23);
             this.comboBox1.TabIndex = 9;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // FavouredOfradioButton
             // 
@@ -295,6 +296,7 @@ namespace Blood_Bowl_Star_Players
             this.FavouredOfradioButton.TabStop = true;
             this.FavouredOfradioButton.Text = "Favoured Of...";
             this.FavouredOfradioButton.UseVisualStyleBackColor = true;
+            this.FavouredOfradioButton.Click += new System.EventHandler(this.FavouredOfradioButton_Click);
             // 
             // UnderworldChallengeradioButton
             // 
@@ -307,6 +309,7 @@ namespace Blood_Bowl_Star_Players
             this.UnderworldChallengeradioButton.TabStop = true;
             this.UnderworldChallengeradioButton.Text = "Underworld Challenge";
             this.UnderworldChallengeradioButton.UseVisualStyleBackColor = true;
+            this.UnderworldChallengeradioButton.Click += new System.EventHandler(this.UnderworldChallengeradioButton_Click);
             // 
             // BadlandsBrawlradioButton
             // 
@@ -319,6 +322,7 @@ namespace Blood_Bowl_Star_Players
             this.BadlandsBrawlradioButton.TabStop = true;
             this.BadlandsBrawlradioButton.Text = "Badlands Brawl";
             this.BadlandsBrawlradioButton.UseVisualStyleBackColor = true;
+            this.BadlandsBrawlradioButton.Click += new System.EventHandler(this.BadlandsBrawlradioButton_Click);
             // 
             // WorldsEdgeSuperradioButton
             // 
@@ -331,6 +335,7 @@ namespace Blood_Bowl_Star_Players
             this.WorldsEdgeSuperradioButton.TabStop = true;
             this.WorldsEdgeSuperradioButton.Text = "Worlds Edge Superleague";
             this.WorldsEdgeSuperradioButton.UseVisualStyleBackColor = true;
+            this.WorldsEdgeSuperradioButton.Click += new System.EventHandler(this.WorldsEdgeSuperradioButton_Click);
             // 
             // ElvenKingdomradioButton
             // 
@@ -343,6 +348,7 @@ namespace Blood_Bowl_Star_Players
             this.ElvenKingdomradioButton.TabStop = true;
             this.ElvenKingdomradioButton.Text = "Elven Kingdom League";
             this.ElvenKingdomradioButton.UseVisualStyleBackColor = true;
+            this.ElvenKingdomradioButton.Click += new System.EventHandler(this.ElvenKingdomradioButton_Click);
             // 
             // SylvanianSpotlightradioButton
             // 
@@ -355,6 +361,7 @@ namespace Blood_Bowl_Star_Players
             this.SylvanianSpotlightradioButton.TabStop = true;
             this.SylvanianSpotlightradioButton.Text = "Sylvanian Spotlight";
             this.SylvanianSpotlightradioButton.UseVisualStyleBackColor = true;
+            this.SylvanianSpotlightradioButton.Click += new System.EventHandler(this.SylvanianSpotlightradioButton_Click);
             // 
             // OldWorldClassicradioButton
             // 
@@ -367,6 +374,7 @@ namespace Blood_Bowl_Star_Players
             this.OldWorldClassicradioButton.TabStop = true;
             this.OldWorldClassicradioButton.Text = "Old World Classic";
             this.OldWorldClassicradioButton.UseVisualStyleBackColor = true;
+            this.OldWorldClassicradioButton.Click += new System.EventHandler(this.OldWorldClassicradioButton_Click);
             // 
             // LustrianSuperleagueradioButton
             // 
@@ -379,6 +387,7 @@ namespace Blood_Bowl_Star_Players
             this.LustrianSuperleagueradioButton.TabStop = true;
             this.LustrianSuperleagueradioButton.Text = "Lustrian Superleague";
             this.LustrianSuperleagueradioButton.UseVisualStyleBackColor = true;
+            this.LustrianSuperleagueradioButton.Click += new System.EventHandler(this.LustrianSuperleagueradioButton_Click);
             // 
             // HalflingThimbleradioButton
             // 
