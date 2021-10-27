@@ -50,7 +50,19 @@ namespace Blood_Bowl_Star_Players
             this.Nextbutton = new System.Windows.Forms.Button();
             this.Previousbutton = new System.Windows.Forms.Button();
             this.StarpictureBox = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.FavouredOfradioButton = new System.Windows.Forms.RadioButton();
+            this.UnderworldChallengeradioButton = new System.Windows.Forms.RadioButton();
+            this.BadlandsBrawlradioButton = new System.Windows.Forms.RadioButton();
+            this.WorldsEdgeSuperradioButton = new System.Windows.Forms.RadioButton();
+            this.ElvenKingdomradioButton = new System.Windows.Forms.RadioButton();
+            this.SylvanianSpotlightradioButton = new System.Windows.Forms.RadioButton();
+            this.OldWorldClassicradioButton = new System.Windows.Forms.RadioButton();
+            this.LustrianSuperleagueradioButton = new System.Windows.Forms.RadioButton();
+            this.HalflingThimbleradioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.StarpictureBox)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // starPlayerNametextBox
@@ -245,13 +257,150 @@ namespace Blood_Bowl_Star_Players
             this.StarpictureBox.TabIndex = 21;
             this.StarpictureBox.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.FavouredOfradioButton);
+            this.panel1.Controls.Add(this.UnderworldChallengeradioButton);
+            this.panel1.Controls.Add(this.BadlandsBrawlradioButton);
+            this.panel1.Controls.Add(this.WorldsEdgeSuperradioButton);
+            this.panel1.Controls.Add(this.ElvenKingdomradioButton);
+            this.panel1.Controls.Add(this.SylvanianSpotlightradioButton);
+            this.panel1.Controls.Add(this.OldWorldClassicradioButton);
+            this.panel1.Controls.Add(this.LustrianSuperleagueradioButton);
+            this.panel1.Controls.Add(this.HalflingThimbleradioButton);
+            this.panel1.Location = new System.Drawing.Point(688, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(185, 483);
+            this.panel1.TabIndex = 22;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(13, 251);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(160, 23);
+            this.comboBox1.TabIndex = 9;
+            // 
+            // FavouredOfradioButton
+            // 
+            this.FavouredOfradioButton.AutoSize = true;
+            this.FavouredOfradioButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FavouredOfradioButton.Location = new System.Drawing.Point(8, 215);
+            this.FavouredOfradioButton.Name = "FavouredOfradioButton";
+            this.FavouredOfradioButton.Size = new System.Drawing.Size(108, 18);
+            this.FavouredOfradioButton.TabIndex = 8;
+            this.FavouredOfradioButton.TabStop = true;
+            this.FavouredOfradioButton.Text = "Favoured Of...";
+            this.FavouredOfradioButton.UseVisualStyleBackColor = true;
+            // 
+            // UnderworldChallengeradioButton
+            // 
+            this.UnderworldChallengeradioButton.AutoSize = true;
+            this.UnderworldChallengeradioButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UnderworldChallengeradioButton.Location = new System.Drawing.Point(8, 191);
+            this.UnderworldChallengeradioButton.Name = "UnderworldChallengeradioButton";
+            this.UnderworldChallengeradioButton.Size = new System.Drawing.Size(152, 18);
+            this.UnderworldChallengeradioButton.TabIndex = 7;
+            this.UnderworldChallengeradioButton.TabStop = true;
+            this.UnderworldChallengeradioButton.Text = "Underworld Challenge";
+            this.UnderworldChallengeradioButton.UseVisualStyleBackColor = true;
+            // 
+            // BadlandsBrawlradioButton
+            // 
+            this.BadlandsBrawlradioButton.AutoSize = true;
+            this.BadlandsBrawlradioButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BadlandsBrawlradioButton.Location = new System.Drawing.Point(8, 167);
+            this.BadlandsBrawlradioButton.Name = "BadlandsBrawlradioButton";
+            this.BadlandsBrawlradioButton.Size = new System.Drawing.Size(109, 18);
+            this.BadlandsBrawlradioButton.TabIndex = 6;
+            this.BadlandsBrawlradioButton.TabStop = true;
+            this.BadlandsBrawlradioButton.Text = "Badlands Brawl";
+            this.BadlandsBrawlradioButton.UseVisualStyleBackColor = true;
+            // 
+            // WorldsEdgeSuperradioButton
+            // 
+            this.WorldsEdgeSuperradioButton.AutoSize = true;
+            this.WorldsEdgeSuperradioButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WorldsEdgeSuperradioButton.Location = new System.Drawing.Point(8, 143);
+            this.WorldsEdgeSuperradioButton.Name = "WorldsEdgeSuperradioButton";
+            this.WorldsEdgeSuperradioButton.Size = new System.Drawing.Size(174, 18);
+            this.WorldsEdgeSuperradioButton.TabIndex = 5;
+            this.WorldsEdgeSuperradioButton.TabStop = true;
+            this.WorldsEdgeSuperradioButton.Text = "Worlds Edge Superleague";
+            this.WorldsEdgeSuperradioButton.UseVisualStyleBackColor = true;
+            // 
+            // ElvenKingdomradioButton
+            // 
+            this.ElvenKingdomradioButton.AutoSize = true;
+            this.ElvenKingdomradioButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ElvenKingdomradioButton.Location = new System.Drawing.Point(8, 119);
+            this.ElvenKingdomradioButton.Name = "ElvenKingdomradioButton";
+            this.ElvenKingdomradioButton.Size = new System.Drawing.Size(155, 18);
+            this.ElvenKingdomradioButton.TabIndex = 4;
+            this.ElvenKingdomradioButton.TabStop = true;
+            this.ElvenKingdomradioButton.Text = "Elven Kingdom League";
+            this.ElvenKingdomradioButton.UseVisualStyleBackColor = true;
+            // 
+            // SylvanianSpotlightradioButton
+            // 
+            this.SylvanianSpotlightradioButton.AutoSize = true;
+            this.SylvanianSpotlightradioButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SylvanianSpotlightradioButton.Location = new System.Drawing.Point(8, 95);
+            this.SylvanianSpotlightradioButton.Name = "SylvanianSpotlightradioButton";
+            this.SylvanianSpotlightradioButton.Size = new System.Drawing.Size(130, 18);
+            this.SylvanianSpotlightradioButton.TabIndex = 3;
+            this.SylvanianSpotlightradioButton.TabStop = true;
+            this.SylvanianSpotlightradioButton.Text = "Sylvanian Spotlight";
+            this.SylvanianSpotlightradioButton.UseVisualStyleBackColor = true;
+            // 
+            // OldWorldClassicradioButton
+            // 
+            this.OldWorldClassicradioButton.AutoSize = true;
+            this.OldWorldClassicradioButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OldWorldClassicradioButton.Location = new System.Drawing.Point(8, 71);
+            this.OldWorldClassicradioButton.Name = "OldWorldClassicradioButton";
+            this.OldWorldClassicradioButton.Size = new System.Drawing.Size(126, 18);
+            this.OldWorldClassicradioButton.TabIndex = 2;
+            this.OldWorldClassicradioButton.TabStop = true;
+            this.OldWorldClassicradioButton.Text = "Old World Classic";
+            this.OldWorldClassicradioButton.UseVisualStyleBackColor = true;
+            // 
+            // LustrianSuperleagueradioButton
+            // 
+            this.LustrianSuperleagueradioButton.AutoSize = true;
+            this.LustrianSuperleagueradioButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LustrianSuperleagueradioButton.Location = new System.Drawing.Point(8, 47);
+            this.LustrianSuperleagueradioButton.Name = "LustrianSuperleagueradioButton";
+            this.LustrianSuperleagueradioButton.Size = new System.Drawing.Size(143, 18);
+            this.LustrianSuperleagueradioButton.TabIndex = 1;
+            this.LustrianSuperleagueradioButton.TabStop = true;
+            this.LustrianSuperleagueradioButton.Text = "Lustrian Superleague";
+            this.LustrianSuperleagueradioButton.UseVisualStyleBackColor = true;
+            // 
+            // HalflingThimbleradioButton
+            // 
+            this.HalflingThimbleradioButton.AutoSize = true;
+            this.HalflingThimbleradioButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HalflingThimbleradioButton.Location = new System.Drawing.Point(8, 23);
+            this.HalflingThimbleradioButton.Name = "HalflingThimbleradioButton";
+            this.HalflingThimbleradioButton.Size = new System.Drawing.Size(143, 18);
+            this.HalflingThimbleradioButton.TabIndex = 0;
+            this.HalflingThimbleradioButton.TabStop = true;
+            this.HalflingThimbleradioButton.Text = "Halfling Thimble Cup";
+            this.HalflingThimbleradioButton.UseVisualStyleBackColor = true;
+            this.HalflingThimbleradioButton.Click += new System.EventHandler(this.HalflingThimbleradioButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(666, 483);
+            this.ClientSize = new System.Drawing.Size(873, 483);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.StarpictureBox);
             this.Controls.Add(this.Previousbutton);
             this.Controls.Add(this.Nextbutton);
@@ -275,6 +424,8 @@ namespace Blood_Bowl_Star_Players
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.StarpictureBox)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,6 +453,17 @@ namespace Blood_Bowl_Star_Players
         private System.Windows.Forms.Button Nextbutton;
         private System.Windows.Forms.Button Previousbutton;
         private System.Windows.Forms.PictureBox StarpictureBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton FavouredOfradioButton;
+        private System.Windows.Forms.RadioButton UnderworldChallengeradioButton;
+        private System.Windows.Forms.RadioButton BadlandsBrawlradioButton;
+        private System.Windows.Forms.RadioButton WorldsEdgeSuperradioButton;
+        private System.Windows.Forms.RadioButton ElvenKingdomradioButton;
+        private System.Windows.Forms.RadioButton SylvanianSpotlightradioButton;
+        private System.Windows.Forms.RadioButton OldWorldClassicradioButton;
+        private System.Windows.Forms.RadioButton LustrianSuperleagueradioButton;
+        private System.Windows.Forms.RadioButton HalflingThimbleradioButton;
     }
 }
 

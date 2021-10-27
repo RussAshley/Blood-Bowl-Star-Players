@@ -9,8 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Blood_Bowl_Star_Players
+
+   
 {
     public partial class Form1 : Form
+
+         
     {
         static PlayerDataAccess pda = new PlayerDataAccess("Data Source = StarData.db");
         //static StarPlayer starPlayerGriff = new StarPlayer("Griff Oberwald", 7, 4, 2, 3, 9, "Block, dodge, fend, Loner 3+, Sprint, Sure Feet", "yes", "no", "yes", "no", "no", "no", "no", "no", "no", 280, "image here", "Consumate Professional: Once per game , Griff may re-roll one dice that was rolled  either as a single dice roll, as part of a multiple dice roll or as part of a dice pool (this cannot be a dice that was rolled as part of an Armour, Injury or Casualty roll");
@@ -25,6 +29,7 @@ namespace Blood_Bowl_Star_Players
             playerArray = pda.ReadAllStars();
 
             populateForm();
+           
          }
 
         private void Nextbutton_Click(object sender, EventArgs e)
@@ -35,6 +40,7 @@ namespace Blood_Bowl_Star_Players
                 index = 0;
             }
             populateForm();
+            
 
         }
 
@@ -46,11 +52,24 @@ namespace Blood_Bowl_Star_Players
                 index = 0;
             }
             populateForm();
+            
         }
 
         private void populateForm()
         {
             string compare = "Yes";
+
+            string htc="";
+            string ls="";
+            string owc="";
+            string ss="";
+            string ekl="";
+            string wes="";
+            string bb="";
+            string uc="";
+            string fo="";
+                    
+
             starPlayerNametextBox.Text = playerArray[index].StarPlayerName;
             CosttextBox.Text = playerArray[index].Cost.ToString();
 
@@ -63,52 +82,125 @@ namespace Blood_Bowl_Star_Players
             specialRulestextBox.Text = playerArray[index].SpecialRules;
             StarpictureBox.Image = Image.FromFile(playerArray[index].StarPlayerImage);
 
+
             if (playerArray[index].HalflingThimbleCup == compare )
             {
-                LeaguestextBox.Text = ($"Halfling Thimble Cup {Environment.NewLine} \n"); 
-
-
+                htc = "Halfling Thimble Cup, ";
+            }
+            else
+            {
+                htc = "";
             }
 
             if (playerArray[index].LustrianSuperLeague == compare )
             {
-                LeaguestextBox.Text = ($"Lustrian Superleague {Environment.NewLine} \n");
+                ls = "Lustrian Superleague, ";
+            }
+            else
+            {
+                ls = "";
             }
 
-            if (playerArray[index].OldWorldClassic == compare )
+            if (playerArray[index].OldWorldClassic == compare)
             {
-                LeaguestextBox.Text = ($"Old World Classic {Environment.NewLine} \n");
+                owc = "Old World Classic, ";
             }
+            else
+            {
+                owc = "";
+            }
+
 
             if (playerArray[index].SylvanianSpotlight == compare )
             {
-                LeaguestextBox.Text = ($"Sylvanian Spotlight {Environment.NewLine} \n");
+               ss= "Sylvanian Spotlight, ";
+            }
+            else
+            {
+                ss = "";
             }
 
             if (playerArray[index].ElvenKingdomsLeague == compare )
             {
-                LeaguestextBox.Text = ($"Elven Kingdom League {Environment.NewLine} \n");
+                ekl = "Elven Kingdom League, " ;
+            }
+            else
+            {
+                ekl = "";
             }
 
             if (playerArray[index].WorldsEdgeSuperleague == compare )
             {
-                LeaguestextBox.Text = ($"Worlds Edge Superleague {Environment.NewLine} \n");
+                wes = "Worlds Edge Superleague";
+            }
+            else
+            {
+                wes = "";
             }
 
             if (playerArray[index].BadlandsBrawl == compare )
             {
-                LeaguestextBox.Text = ($"Badlands Brawl {Environment.NewLine} \n");
+                bb = "Badlands Brawl, ";
+            }
+            else
+            {
+                bb = "";
             }
 
             if (playerArray[index].UnderworldChallenge == compare )
             {
-                LeaguestextBox.Text = ($"UnderworldChallenge {Environment.NewLine}  \n");
+               uc = "Underworld Challenge, ";
+            }
+            else
+            {
+                uc = "";
             }
 
             if (playerArray[index].FavouredOf == compare )
             {
-                LeaguestextBox.Text = ($"Favoured Of... {Environment.NewLine} \n");
+                fo = "Favoured Of...,  ";
             }
+            else
+            {
+                fo = "";
+            }
+
+            LeaguestextBox.Text = htc + ls  + owc +  ss + ekl +  wes +  bb +  uc +  fo;
+
+
+        }
+
+        private void HalflingThimbleradioButton_Click(object sender, EventArgs e)
+        {
+           
+             playerArray = pda.ReadAllStars();
+            for (int i = 0; i < playerArray.Length; i++)
+            
+
+               if (playerArray[index].HalflingThimbleCup == "Yes")
+              {
+                comboBox1.Items.Add(playerArray[i].StarPlayerName);
+              
+            }
+           
+           
+        }
+
+
+
+
+
+
+
+
+
+        private void populateSidebar()
+        {
+           
         }
     }
+
+
+
+
 }
