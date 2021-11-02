@@ -61,6 +61,8 @@ namespace Blood_Bowl_Star_Players
             this.OldWorldClassicradioButton = new System.Windows.Forms.RadioButton();
             this.LustrianSuperleagueradioButton = new System.Windows.Forms.RadioButton();
             this.HalflingThimbleradioButton = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StarpictureBox)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -402,6 +404,27 @@ namespace Blood_Bowl_Star_Players
             this.HalflingThimbleradioButton.UseVisualStyleBackColor = true;
             this.HalflingThimbleradioButton.Click += new System.EventHandler(this.HalflingThimbleradioButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(560, 421);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Tag = "";
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(560, 448);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 24;
+            this.button2.Tag = "";
+            this.button2.Text = "Modify";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -409,6 +432,8 @@ namespace Blood_Bowl_Star_Players
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(873, 483);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.StarpictureBox);
             this.Controls.Add(this.Previousbutton);
@@ -473,6 +498,8 @@ namespace Blood_Bowl_Star_Players
         private System.Windows.Forms.RadioButton OldWorldClassicradioButton;
         private System.Windows.Forms.RadioButton LustrianSuperleagueradioButton;
         private System.Windows.Forms.RadioButton HalflingThimbleradioButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

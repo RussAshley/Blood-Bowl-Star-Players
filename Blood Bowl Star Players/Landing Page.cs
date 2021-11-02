@@ -321,6 +321,11 @@ namespace Blood_Bowl_Star_Players
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
