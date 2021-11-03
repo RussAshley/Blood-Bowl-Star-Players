@@ -424,6 +424,7 @@ namespace Blood_Bowl_Star_Players
             this.button2.Tag = "";
             this.button2.Text = "Modify";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 

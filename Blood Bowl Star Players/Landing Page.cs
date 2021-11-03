@@ -324,7 +324,15 @@ namespace Blood_Bowl_Star_Players
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Search searchForm = new Search();
+            searchForm.Show();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            playerArray[index].StarPlayerName = "updated";
+            pda.UpdateStar(playerArray[index]); 
+            playerArray = pda.ReadAllStars();
         }
     }
 
