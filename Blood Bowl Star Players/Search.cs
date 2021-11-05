@@ -28,7 +28,8 @@ namespace Blood_Bowl_Star_Players
 
             if (searchResult.StarPlayerName == SearchtextBox.Text)
             {
-                Form1 form1 = new Form1();
+             
+                Form1 form1 = new Form1(searchResult);
                 form1.Show();
                 this.Hide();
             }

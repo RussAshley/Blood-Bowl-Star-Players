@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Blood_Bowl_Star_Players
 {
-    class StarPlayer
+    public class StarPlayer
     {
 
-        private string starPlayerName;
-        private int movementAllowance;
-        private int strength;
-        private int agility;
+        public string starPlayerName;
+        public int movementAllowance;
+        public int strength;
+        public int agility;
         private int passingAbility;
         private int armourValue;
         private string skills;

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Blood_Bowl_Star_Players
 
-   
+
 {
     public partial class Form1 : Form
 
-         
+
     {
         static PlayerDataAccess pda = new PlayerDataAccess("Data Source = StarData.db");
         //static StarPlayer starPlayerGriff = new StarPlayer("Griff Oberwald", 7, 4, 2, 3, 9, "Block, dodge, fend, Loner 3+, Sprint, Sure Feet", "yes", "no", "yes", "no", "no", "no", "no", "no", "no", 280, "image here", "Consumate Professional: Once per game , Griff may re-roll one dice that was rolled  either as a single dice roll, as part of a multiple dice roll or as part of a dice pool (this cannot be a dice that was rolled as part of an Armour, Injury or Casualty roll");
@@ -23,28 +23,31 @@ namespace Blood_Bowl_Star_Players
         StarPlayer[] playerArray; // = new StarPlayer[] { starPlayerGriff, starPlayerKarla };
 
         int index = 0;
-        public Form1()
+        public Form1(StarPlayer searchResult)
         {
             InitializeComponent();
             playerArray = pda.ReadAllStars();
 
             populateForm();
-           
-         }
 
-        private void Nextbutton_Click(object sender, EventArgs e)
+        }
+
+
+
+
+        public void Nextbutton_Click(object sender, EventArgs e)
         {
             index++;
-            if(index >playerArray.Length -1)
+            if (index > playerArray.Length - 1)
             {
                 index = 0;
             }
             populateForm();
-            
+
 
         }
 
-        private void Previousbutton_Click(object sender, EventArgs e)
+        public void Previousbutton_Click(object sender, EventArgs e)
         {
             index--;
             if (index < playerArray.Length - 1)
@@ -52,23 +55,23 @@ namespace Blood_Bowl_Star_Players
                 index = 0;
             }
             populateForm();
-            
+
         }
 
-        private void populateForm()
+        public void populateForm()
         {
             string compare = "Yes";
 
-            string htc="";
-            string ls="";
-            string owc="";
-            string ss="";
-            string ekl="";
-            string wes="";
-            string bb="";
-            string uc="";
-            string fo="";
-                    
+            string htc = "";
+            string ls = "";
+            string owc = "";
+            string ss = "";
+            string ekl = "";
+            string wes = "";
+            string bb = "";
+            string uc = "";
+            string fo = "";
+
 
             starPlayerNametextBox.Text = playerArray[index].StarPlayerName;
             CosttextBox.Text = playerArray[index].Cost.ToString();
@@ -83,7 +86,7 @@ namespace Blood_Bowl_Star_Players
             StarpictureBox.Image = Image.FromFile(playerArray[index].StarPlayerImage);
 
 
-            if (playerArray[index].HalflingThimbleCup == compare )
+            if (playerArray[index].HalflingThimbleCup == compare)
             {
                 htc = "Halfling Thimble Cup, ";
             }
@@ -92,7 +95,7 @@ namespace Blood_Bowl_Star_Players
                 htc = "";
             }
 
-            if (playerArray[index].LustrianSuperLeague == compare )
+            if (playerArray[index].LustrianSuperLeague == compare)
             {
                 ls = "Lustrian Superleague, ";
             }
@@ -111,25 +114,25 @@ namespace Blood_Bowl_Star_Players
             }
 
 
-            if (playerArray[index].SylvanianSpotlight == compare )
+            if (playerArray[index].SylvanianSpotlight == compare)
             {
-               ss= "Sylvanian Spotlight, ";
+                ss = "Sylvanian Spotlight, ";
             }
             else
             {
                 ss = "";
             }
 
-            if (playerArray[index].ElvenKingdomsLeague == compare )
+            if (playerArray[index].ElvenKingdomsLeague == compare)
             {
-                ekl = "Elven Kingdom League, " ;
+                ekl = "Elven Kingdom League, ";
             }
             else
             {
                 ekl = "";
             }
 
-            if (playerArray[index].WorldsEdgeSuperleague == compare )
+            if (playerArray[index].WorldsEdgeSuperleague == compare)
             {
                 wes = "Worlds Edge Superleague";
             }
@@ -138,7 +141,7 @@ namespace Blood_Bowl_Star_Players
                 wes = "";
             }
 
-            if (playerArray[index].BadlandsBrawl == compare )
+            if (playerArray[index].BadlandsBrawl == compare)
             {
                 bb = "Badlands Brawl, ";
             }
@@ -147,16 +150,16 @@ namespace Blood_Bowl_Star_Players
                 bb = "";
             }
 
-            if (playerArray[index].UnderworldChallenge == compare )
+            if (playerArray[index].UnderworldChallenge == compare)
             {
-               uc = "Underworld Challenge, ";
+                uc = "Underworld Challenge, ";
             }
             else
             {
                 uc = "";
             }
 
-            if (playerArray[index].FavouredOf == compare )
+            if (playerArray[index].FavouredOf == compare)
             {
                 fo = "Favoured Of...,  ";
             }
@@ -165,29 +168,29 @@ namespace Blood_Bowl_Star_Players
                 fo = "";
             }
 
-            LeaguestextBox.Text = htc + ls  + owc +  ss + ekl +  wes +  bb +  uc +  fo;
+            LeaguestextBox.Text = htc + ls + owc + ss + ekl + wes + bb + uc + fo;
 
 
         }
 
-        private void HalflingThimbleradioButton_Click(object sender, EventArgs e)
+        public void HalflingThimbleradioButton_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
-           
-             playerArray = pda.ReadAllStars();
-            for (int i = 0; i < playerArray.Length; i++)
-            
 
-               if (playerArray[i].HalflingThimbleCup == "Yes")
-              {
-                comboBox1.Items.Add(playerArray[i].StarPlayerName);
-              
-            }
-           
-           
+            playerArray = pda.ReadAllStars();
+            for (int i = 0; i < playerArray.Length; i++)
+
+
+                if (playerArray[i].HalflingThimbleCup == "Yes")
+                {
+                    comboBox1.Items.Add(playerArray[i].StarPlayerName);
+
+                }
+
+
         }
 
-        private void LustrianSuperleagueradioButton_Click(object sender, EventArgs e)
+        public void LustrianSuperleagueradioButton_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
             playerArray = pda.ReadAllStars();
@@ -202,7 +205,7 @@ namespace Blood_Bowl_Star_Players
 
         }
 
-        private void OldWorldClassicradioButton_Click(object sender, EventArgs e)
+        public void OldWorldClassicradioButton_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
             playerArray = pda.ReadAllStars();
@@ -216,7 +219,7 @@ namespace Blood_Bowl_Star_Players
                 }
         }
 
-        private void SylvanianSpotlightradioButton_Click(object sender, EventArgs e)
+        public void SylvanianSpotlightradioButton_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
             playerArray = pda.ReadAllStars();
@@ -231,7 +234,7 @@ namespace Blood_Bowl_Star_Players
 
         }
 
-        private void ElvenKingdomradioButton_Click(object sender, EventArgs e)
+        public void ElvenKingdomradioButton_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
             playerArray = pda.ReadAllStars();
@@ -246,7 +249,7 @@ namespace Blood_Bowl_Star_Players
 
         }
 
-        private void WorldsEdgeSuperradioButton_Click(object sender, EventArgs e)
+        public void WorldsEdgeSuperradioButton_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
             playerArray = pda.ReadAllStars();
@@ -261,7 +264,7 @@ namespace Blood_Bowl_Star_Players
 
         }
 
-        private void BadlandsBrawlradioButton_Click(object sender, EventArgs e)
+        public void BadlandsBrawlradioButton_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
             playerArray = pda.ReadAllStars();
@@ -275,28 +278,28 @@ namespace Blood_Bowl_Star_Players
                 }
         }
 
-        private void UnderworldChallengeradioButton_Click(object sender, EventArgs e)
+        public void UnderworldChallengeradioButton_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
             playerArray = pda.ReadAllStars();
             for (int i = 0; i < playerArray.Length; i++)
 
 
-                if (playerArray[i].UnderworldChallenge== "Yes")
+                if (playerArray[i].UnderworldChallenge == "Yes")
                 {
                     comboBox1.Items.Add(playerArray[i].StarPlayerName);
 
                 }
         }
 
-        private void FavouredOfradioButton_Click(object sender, EventArgs e)
+        public void FavouredOfradioButton_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
             playerArray = pda.ReadAllStars();
             for (int i = 0; i < playerArray.Length; i++)
 
 
-                if (playerArray[i].FavouredOf== "Yes")
+                if (playerArray[i].FavouredOf == "Yes")
                 {
                     comboBox1.Items.Add(playerArray[i].StarPlayerName);
 
@@ -304,39 +307,41 @@ namespace Blood_Bowl_Star_Players
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // take the selectedindex or selectedplayername and compare to the playerArray index or playername.
-           // starPlayerNametextBox.Text =
-          // playerArray[comboBox1.Text].StarPlayerName;
+            // starPlayerNametextBox.Text =
+            // playerArray[comboBox1.Text].StarPlayerName;
             // textBoxName.Text = yourArray[combobox.selectedindex].ClassName;
-           // playerArray = pda.ReadAllStars();
+            // playerArray = pda.ReadAllStars();
             for (int i = 0; i < playerArray.Length; i++)
 
                 if (comboBox1.Text == playerArray[i].StarPlayerName)
-               {
+                {
                     index = i;
-                   populateForm();
+                    populateForm();
                 }
 
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             Search searchForm = new Search();
             searchForm.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
-            playerArray[index].StarPlayerName = "updated";
-            pda.UpdateStar(playerArray[index]); 
-            playerArray = pda.ReadAllStars();
+            //    playerArray[index].StarPlayerName = "updated";
+            //    pda.UpdateStar(playerArray[index]); 
+            //    playerArray = pda.ReadAllStars();
+            //}
         }
+
+
     }
-
-
-
-
 }
+
+
+

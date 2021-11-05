@@ -8,7 +8,7 @@ namespace Blood_Bowl_Star_Players
     class PlayerDataAccess
     {
 
-        private string connectionString;
+        public string connectionString;
 
         public string ConnectionString { get => connectionString; set => connectionString = value; }
 
@@ -77,34 +77,34 @@ namespace Blood_Bowl_Star_Players
             }
             return result;
         }
-        public void UpdateStar(StarPlayer starToUpdate)
-        {
-            using (var connection = new SQLiteConnection(ConnectionString))
-            {
-                connection.Open();
+        //public void UpdateStar(StarPlayer starToUpdate)
+        //{
+        //    using (var connection = new SQLiteConnection(ConnectionString))
+        //    {
+        //        connection.Open();
 
-                var command = connection.CreateCommand();
-                command.CommandText = @"UPDATE StarPlayers SET Name = @Name, MA = @MA, ST = @ST, AG=@AG, PA=@PA, AV=@AV, Skills=@Skills,Special Rules =@Special Rules, Halfling Thimble Cup= WHERE id = @id";
+        //        var command = connection.CreateCommand();
+        //        command.CommandText = @"UPDATE StarPlayers SET  MA = @MA, ST = @ST, AG=@AG, PA=@PA, AV=@AV, Skills=@Skills,Special Rules =@Special Rules, Halfling Thimble Cup= @Halfling Thimble Cup, WHERE id = @id";
 
-                command.Parameters.AddWithValue("@make", carToUpdate.Make);
-                command.Parameters.AddWithValue("@model", carToUpdate.Model);
-                command.Parameters.AddWithValue("@colour", carToUpdate.Colour);
-                command.Parameters.AddWithValue("@engineSize", carToUpdate.EngineSize);
-                command.Parameters.AddWithValue("@id", carToUpdate.Id);
+        //        command.Parameters.AddWithValue("@make", carToUpdate.Make);
+        //        command.Parameters.AddWithValue("@model", carToUpdate.Model);
+        //        command.Parameters.AddWithValue("@colour", carToUpdate.Colour);
+        //        command.Parameters.AddWithValue("@engineSize", carToUpdate.EngineSize);
+        //        command.Parameters.AddWithValue("@id", carToUpdate.Id);
 
-                try
-                {
-                    int count = command.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+        //        try
+        //        {
+        //            int count = command.ExecuteNonQuery();
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            Console.WriteLine(ex.Message);
+        //        }
 
-                connection.Close();
-            }
+        //        connection.Close();
+        //    }
 
-        }
+        //}
     }
 }
 
